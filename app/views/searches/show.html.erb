@@ -1,0 +1,22 @@
+ <h1>Search Result</h1>
+ <p><%= link_to 'Back', new_search_path %></p>
+
+ <% if @search.search_products.empty? %>
+    <p>No records found</p>
+
+ <% else %>
+
+   <% @search.search_products.each do |c| %>
+     <br>
+  
+    <div class="div">
+      <table>
+         <tr><th>Name<td><%=c.name %></td></th></tr>
+         <tr><th>Brand_id<td><%=c.brand_id %></td></th></tr>
+      </table>
+
+    </div>
+
+ <% end %>
+
+<% end %>
